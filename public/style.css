@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;600;700&display=swap');
+body {
+    background-color: #ffeaa7;
+    min-height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(198, 1%, 29%);
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 130%;
+  }
+  
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    position: relative;
+    max-width: 80vw;
+    min-width: 375px;
+    background: #f1f5f8;
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .heading h1 {
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: #fdcb6e;
+    font-size: 1.5rem;
+  }
+  
+  .form input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.7rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px #fdcb6e;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsla(260, 2%, 25%, 0.7);
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    background-color: #ffeaa7;
+    cursor: pointer;
+  }
+  button span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid hsl(198, 1%, 29%);
+  }
+  
+  li {
+    text-align: left;
+    position: relative;
+    padding: 0.5rem;
+    width: 80%;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  ul div {
+    display: flex;
+    align-items: center;
+  }
+  ul button {
+    width: 15%;
+    height: 30px;
+    text-align: center;
+    padding: 3px 4px;
+    font-weight: 700;
+  }
+  ul button:hover {
+    cursor: pointer;
+    background-color: tomato;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .deleteBtn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: tomato;
+      font-weight: 600;
+      border-radius: 10px;
+      margin-top: 15px;
+  }
+  .deleteBtn:hover {
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+      background-color: #fdcb6e;
+      transition: all 0.3s ease-in-out;
+  }
