@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import AddIcon from '@mui/icons-material/Add';
+
 
 function InputText(props) {
     const [listItem, setListItem] = useState("")
@@ -12,7 +14,9 @@ function InputText(props) {
             props.onButtonClick(listItem)
             setListItem("")
         }}>
-          <span>Add</span>
+          <span>
+            <AddIcon />
+          </span>
         </button>
       </div>
     )

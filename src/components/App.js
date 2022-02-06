@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ToDOList from "./ToDoList"
 import InputText from "./InputText"
 
@@ -7,11 +7,12 @@ function App() {
   const [listItemFinal, setListItemFinal] = useState([])
   function handleButton(listItem) {
     setListItemFinal((prevState) => {
-      if (!listItem.trim().length) 
+      if (!listItem.trim().length)
         return [...prevState]
+
       else {
-          setDeleteBtn(true)
-          return [...prevState, listItem]
+        setDeleteBtn(true)
+        return [...prevState, listItem]
       }
     })
   }
@@ -21,26 +22,41 @@ function App() {
         (item) => {
           return item !== list
         }
-      )
-    })
-  }
-  return (
-    <div className="container">
+        )
+      })
+    }
+    useEffect(() => {
+      const items = JSON.parse(localStorage.getItem("lists"))
+      if (items.length) {
+        setListItemFinal(items)
+        setDeleteBtn(true)
+      }
+    }, [])
+    useEffect(() => {
+      localStorage.setItem("lists", JSON.stringify(listItemFinal))
+      if(!listItemFinal.length)
+        setDeleteBtn(false)
+    }, [listItemFinal])
+    return (
+      <div className="container">
         <div className="heading">
             <h1>To-Do List</h1>
         </div>
         <InputText
             onButtonClick = {handleButton}
-        />    
+            />    
         <div>
             <ul>
-            {listItemFinal.map((item, index) => (
+            {listItemFinal.map((item, index) => {
+              return (
                 <ToDOList 
                 key = {index}
                 listItem = {item} 
                 onChecked = {deleteItem}
                 />
-            ))}
+                )
+            }
+            )}
             </ul>
         </div>
         <button 

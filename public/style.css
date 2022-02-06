@@ -55,6 +55,7 @@ body {
     color: hsla(260, 2%, 25%, 0.7);
     width: 70%;
     margin-bottom: 20px;
+    outline: none;
   }
   
   button {
@@ -69,7 +70,7 @@ body {
   button span {
     background: #f1f5f8;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 5px;
     border: 2px solid hsl(198, 1%, 29%);
   }
@@ -92,11 +93,12 @@ body {
     text-align: center;
     padding: 3px 4px;
     font-weight: 700;
+    background: transparent;
   }
   ul button:hover {
     cursor: pointer;
-    background-color: tomato;
-    color: white;
+    /* background-color: tomato; */
+    /* color: white; */
     transition: all 0.3s ease-in-out;
   }
   .deleteBtn {
