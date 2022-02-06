@@ -34,8 +34,6 @@ function App() {
     }, [])
     useEffect(() => {
       localStorage.setItem("lists", JSON.stringify(listItemFinal))
-      if(!listItemFinal.length)
-        setDeleteBtn(false)
     }, [listItemFinal])
     return (
       <div className="container">
